@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .top_menu {
+    position: fixed;
+  
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 6px 7px 0px rgba(201, 34, 25, 1);
+    height: 75px;
+    z-index: 1000;
+  
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Nav_menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo1,
+  .logo2 {
+    margin-right: 20px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+  
+  .Navlogo {
+    width: 50px;
+    margin-left: 50px;
+  }
+  
+  .Navlogo2 {
+    width: 220px;
+  }
+  
+  
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .navbar li {
+    margin-right: 50px;
+  }
+  
+  .navbar a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .inicio_sesion li {
+    list-style: none; /* Eliminamos el estilo del punto */
+    display: inline-block;
+    cursor: pointer; /* Hace que el ícono sea interactivo */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza la animación */
+  }
+  
+  .inicio_sesion li:hover {
+    background-color: #009046ee; /* Cambia el fondo al pasar el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    border-radius: 50%; /* Hace un círculo al fondo si es necesario */
+  }
+  
+  .inicio_sesion li img {
+    width: 26px; /* Ajusta el tamaño del ícono según necesites */
+    height: 26px;
+    transition: filter 0.3s ease; /* Suaviza los cambios de color */
+  }
+  
+  .inicio_sesion li:hover img {
+    filter: brightness(0) invert(1); /* Cambia el color del ícono (efecto invertido) */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #login-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  #login-box .login-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #login-box h2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  #login-box .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  #login-box .tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  #login-box .tabs button.active {
+    background: #db261cee;
+    color: white;
+  }
+  
+  #login-box input {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  #login-box button {
+    padding: 10px;
+    width: 100%;
+    background-color: #db261cee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #login-box button:hover {
+    background-color: #0090468b;
+  }
+  
+  #close-login {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .form-hidden {
+    display: none;
+  }
+  
+  .form-active {
+    display: block;
+  }
+  
+  .navbar a:hover {
+    color: #009045;
+    box-shadow: 0px 5px 0 #009045;
+  }
+  
+  .slider {
+    position: relative;
+    width: calc(100% - 100px);
+    height: 500px;
+    margin: 50px;
+    background-color: #db261cee;
+    color: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 125px;
+  }
+  
+  .slider-container {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+  }
+  
+  .slider-container.active {
+    left: 0;
+    opacity: 1;
+  }
+  
+  .slider-image,
+  .slider-text {
+    float: left;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .slider-image {
+    border-radius: 10px;
+  }
+  
+  .slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-color: black;
+  }
+  
+  .slider-text {
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .slider-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .slider-text p {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .recuadros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .recuadro {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    margin-bottom: 100px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  
+  .recuadro h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .recuadro p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .footer .col-md-4 {
+    width: 33.33%;
+    margin-bottom: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .footer h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer li {
+    margin-bottom: 10px;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .contact {
+    position: relative;
+  }
+  
+  .footericon {
+    position: absolute;
+    left: 90px;
+    justify-content: space-between;
+  }
+  
+  .footer .copyright {
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  
+  
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar li {
+      margin-right: 0;
+    }
+  }
